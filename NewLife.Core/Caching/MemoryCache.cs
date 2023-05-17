@@ -74,7 +74,7 @@ namespace NewLife.Caching
             if (clearTimer == null)
             {
                 var period = Period;
-                clearTimer = new TimerX(RemoveNotAlive, null, 10 * 1000, period * 1000)
+                clearTimer = new TimerX(RemoveNotAlive, null, 1000, period * 1000)
                 {
                     Async = true,
                     CanExecute = () => _cache.Any(),
